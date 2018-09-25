@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  author: MyString
+  publisher: MyString
+  category: MyString
+  isbn: MyString
+  dewey_decimal_number: MyString
+  binding: 1
+
+two:
+  title: MyString
+  author: MyString
+  publisher: MyString
+  category: MyString
+  isbn: MyString
+  dewey_decimal_number: MyString
+  binding: 1
