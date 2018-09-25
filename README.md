@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a tutorial application that will teach you one way that you can use to model larger datasets in a rails app.
 
-Things you may want to cover:
+## Tutorials
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Modeling More Complex Datasets In Rails](https://johnbeatty.co/2018/09/25/modeling-more-complex-datasets-in-rails)
