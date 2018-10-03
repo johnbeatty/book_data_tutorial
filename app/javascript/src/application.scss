@@ -1,0 +1,16 @@
+
+div.left-col {
+  display: inline;
+  float: left;
+  width: 33%;
+  select {
+    padding-left: 10%;
+    width: 80%;
+  }
+}
+
+div.right-col {
+  display: inline;
+  float: right;
+  width: 66%;
+}
