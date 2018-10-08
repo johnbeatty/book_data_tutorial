@@ -1,16 +1,16 @@
 
-div.left-col {
+div.small-col {
   display: inline;
   float: left;
-  width: 33%;
+  width: 25%;
   select {
     padding-left: 10%;
     width: 80%;
   }
 }
 
-div.right-col {
+div.large-col {
   display: inline;
   float: right;
-  width: 66%;
+  width: 50%;
 }

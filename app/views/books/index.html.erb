@@ -1,14 +1,22 @@
 <h1>All Books</h1>
 <div data-controller="select-filter" data-select-filter-url="<%= books_filter_path %>">
-  <div class="left-col">
+  <div class="small-col">
+    <h2>Filter Publishers:</h2>
+    <select name="publishers" multiple size="30"  data-action="select-filter#publisherChange">
+      <%= @publishers.each do |publisher| %>
+        <option value="<%= publisher %>"><%= publisher.humanize %></option>
+      <% end %>
+    </select>
+  </div>
+  <div class="small-col">
     <h2>Filter categories:</h2>
-    <select name="categories" multiple size="<%= @categories.length %>"  data-action="select-filter#change">
+    <select name="categories" multiple size="30"  data-action="select-filter#categoryChange">
       <%= @categories.each do |category| %>
         <option value="<%= category %>"><%= category.humanize %></option>
       <% end %>
     </select>
   </div>
-  <div class="right-col" data-target="select-filter.books">
+  <div class="large-col" data-target="select-filter.books">
     <%= render partial: 'book_list', locals: { books: @books} %>
   </div>
 </div>

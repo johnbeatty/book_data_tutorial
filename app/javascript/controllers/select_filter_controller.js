@@ -3,10 +3,24 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = [ "books" ]
 
-  change(event) {
+  connect() {
+    this.filters =  { categories: [], publishers: []} 
+  }
+
+  publisherChange(event) {
+    this.filters.publishers = getSelectedValues(event)
+    this.change()
+  }
+
+  categoryChange(event) {
+    this.filters.categories = getSelectedValues(event)
+    this.change()
+  }
+
+  change() {
     fetch(this.data.get("url"), { 
       method: 'POST', 
-      body: JSON.stringify( { categories: [...event.target.selectedOptions].map(option => option.value)}),
+      body: JSON.stringify( this.filters ),
       credentials: "include",
       dataType: 'script',
       headers: {
@@ -19,6 +33,10 @@ export default class extends Controller {
         this.booksTarget.innerHTML = html
       })
   }
+}
+
+function getSelectedValues(event) {
+  return [...event.target.selectedOptions].map(option => option.value)
 }
 
 function getMetaValue(name) {
